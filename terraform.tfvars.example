@@ -1,0 +1,50 @@
+# Example variables file.
+# Copy to terraform.tfvars and fill in values for your own vSphere environment.
+# terraform.tfvars is gitignored so your real values never get committed.
+#
+# Credentials (vsphere_user / vsphere_password) are NOT set here on purpose.
+# Provide them at runtime instead, e.g.:
+#   export TF_VAR_vsphere_user='administrator@vsphere.local'
+#   export TF_VAR_vsphere_password='...'
+# or via the credentials helper described in credentials-guide.md.
+
+# Infrastructure Settings
+dc             = "Datacenter"                 # vSphere datacenter name
+vsphere_server = "vcenter.example.com"        # vCenter / ESXi hostname or IP
+vmrp           = "Cluster/Resources"          # Full path to the resource pool
+datastore      = "datastore1"                 # Datastore name
+
+# VM Settings
+vmname     = "example-vm"
+vmtemp     = "your-template-name"             # Name of the source template
+instances  = 1
+cpu_number = 2
+ram_size   = 4096
+
+# Network Configuration (minimal - no static IP)
+network                     = {}
+wait_for_guest_net_routable = false
+wait_for_guest_ip_timeout   = 0
+wait_for_guest_net_timeout  = 0
+
+# For a static IP, use the map form instead, e.g.:
+# network = {
+#   "VM Network" = ["10.0.0.10"]
+# }
+
+# Windows-Specific Settings (set is_windows_image = false for Linux)
+is_windows_image = true
+firmware         = "efi"
+local_adminpass  = "ChangeMe-UseAStrongPassword!"   # Set a strong password
+workgroup        = "WORKGROUP"
+orgname          = "example.com"
+time_zone        = "085"
+auto_logon       = true
+auto_logon_count = 1
+
+# Users
+full_name = "Administrator"
+run_once  = []
+
+# Skip customization completely
+# skip_customization = true
