@@ -1,6 +1,6 @@
 # Terraform vSphere VM
 
-![Terraform Version](https://img.shields.io/badge/Terraform-%3E%3D1.9-green.svg) ![vSphere Provider](https://img.shields.io/badge/hashicorp%2Fvsphere-2.10-blue.svg) [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE) ![Maintenance](https://img.shields.io/badge/maintained-no-red.svg)
+![Terraform Version](https://img.shields.io/badge/Terraform-%3E%3D1.9-green.svg) ![vSphere Provider](https://img.shields.io/badge/hashicorp%2Fvsphere-2.10-blue.svg) [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE) ![Maintenance](https://img.shields.io/badge/maintained-no-red.svg) [![Hits](https://hits.sh/github.com/NX1X/terraform-vmware-vsphere-vm.svg?label=views)](https://hits.sh/github.com/NX1X/terraform-vmware-vsphere-vm/)
 
 > [!WARNING]
 > **This project is no longer maintained.** It is published for reference and is
